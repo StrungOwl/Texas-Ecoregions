@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Texas Ecoregions</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <!-- Start Menu - English -->
+    <div id="startMenuEng" class="page active">
+      <div class="container">
+        <div class="sidebar">
+          <h1>Texas Ecoregions</h1>
+          <p class="description">Select an ecoregion to see its description and a list of plants that grow there.</p>
+          <p class="or-text">or</p>
+        </div>
+        
+        <div class="main-content">
+          <div class="map-container">
+            <img src="https://www.figma.com/api/mcp/asset/69a9b553-5462-4ad3-aeb2-afcbf78e3e3f" alt="Texas Ecoregions Map" class="ecoregions-map">
+          </div>
+          
+          <button class="ecoregion-btn southwestern-tablelands" data-region="southwestern-tablelands" onclick="navigateTo('southwesternTablelands')">
+            <img src="https://www.figma.com/api/mcp/asset/da3bfddb-4e5c-4352-858c-5617477623fd" alt="Southwestern Tablelands">
+          </button>
+          
+          <button class="ecoregion-btn chihuahuan-deserts" data-region="chihuahuan-deserts" onclick="navigateTo('chihuahuanDeserts')">
+            <img src="https://www.figma.com/api/mcp/asset/5af3603b-d2c1-4aac-8074-4cf9e654c515" alt="Chihuahuan Deserts">
+          </button>
+          
+          <button class="ecoregion-btn high-plains" data-region="high-plains" onclick="navigateTo('highPlains')">
+            <img src="Ecoregions/high-plains.png" alt="High Plains">
+          </button>
+          
+          <button class="ecoregion-btn central-great-plains" data-region="central-great-plains" onclick="navigateTo('centralGreatPlains')">
+            <img src="Ecoregions/central-great-plains.png" alt="Central Great Plains">
+          </button>
+          
+          <button class="ecoregion-btn cross-timbers" data-region="cross-timbers" onclick="navigateTo('crossTimbers')">
+            <img src="Ecoregions/cross-timbers.png" alt="Cross Timbers">
+          </button>
+          
+          <button class="ecoregion-btn edwards-plateau" data-region="edwards-plateau" onclick="navigateTo('edwardsPlateau')">
+            <img src="Ecoregions/edwards-plateau.png" alt="Edwards Plateau">
+          </button>
+          
+          <button class="ecoregion-btn southern-texas-plains" data-region="southern-texas-plains" onclick="navigateTo('southernTexasPlains')">
+            <img src="Ecoregions/southern-texas-plains.png" alt="Southern Texas Plains">
+          </button>
+          
+          <button class="ecoregion-btn texas-blackland-prairies" data-region="texas-blackland-prairies" onclick="navigateTo('texasBlacklandPrairies')">
+            <img src="Ecoregions/texas-blackland-prairies.png" alt="Texas Blackland Prairies">
+          </button>
+          
+          <button class="ecoregion-btn east-central-texas-plains" data-region="east-central-texas-plains" onclick="navigateTo('eastCentralTexasPlains')">
+            <img src="Ecoregions/east-central-texas-plains.png" alt="East Central Texas Plains">
+          </button>
+          
+          <button class="ecoregion-btn western-gulf-coastal-plain" data-region="western-gulf-coastal-plain" onclick="navigateTo('westernGulfCoastalPlain')">
+            <img src="Ecoregions/western-gulf-coastal-plain.png" alt="Western Gulf Coastal Plain">
+          </button>
+          
+          <button class="ecoregion-btn south-central-plains" data-region="south-central-plains" onclick="navigateTo('southCentralPlains')">
+            <img src="Ecoregions/south-central-plains.png" alt="South Central Plains">
+          </button>
+          
+          <button class="ecoregion-btn arizona-new-mexico-mountains" data-region="arizona-new-mexico-mountains" onclick="navigateTo('arizonaNewMexicoMountains')">
+            <img src="Ecoregions/arizona-new-mexico-mountains.png" alt="Arizona New Mexico Mountains">
+          </button>
+          
+          <div class="language-selector">
+            <span>English</span>
+            <span class="divider">|</span>
+            <a href="#" onclick="navigateTo('startMenuSpa'); return false;">Español</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Start Menu - Spanish -->
+    <div id="startMenuSpa" class="page">
+      <div class="container">
+        <div class="sidebar">
+          <h1>Ecorregiones de Texas</h1>
+          <p class="description">Selecciona una ecorregión para ver su descripción y una lista de plantas que crecen allí.</p>
+          <p class="or-text">o</p>
+        </div>
+        
+        <div class="main-content">
+          <div class="map-container">
+            <img src="https://www.figma.com/api/mcp/asset/69a9b553-5462-4ad3-aeb2-afcbf78e3e3f" alt="Mapa de Ecorregiones de Texas" class="ecoregions-map">
+          </div>
+          
+          <button class="ecoregion-btn southwestern-tablelands" data-region="southwestern-tablelands" onclick="navigateTo('southwesternTablelands')">
+            <img src="https://www.figma.com/api/mcp/asset/4bb5ea8f-328c-4991-a5ae-e28d038c2224" alt="Mesetas del Suroeste">
+          </button>
+          
+          <button class="ecoregion-btn chihuahuan-deserts" data-region="chihuahuan-deserts" onclick="navigateTo('chihuahuanDeserts')">
+            <img src="https://www.figma.com/api/mcp/asset/af4644a0-8028-45f4-a1db-3269ae7e3c52" alt="Desiertos de Chihuahua">
+          </button>
+          
+          <button class="ecoregion-btn high-plains" data-region="high-plains" onclick="navigateTo('highPlains')">
+            <img src="Ecoregions/high-plains.png" alt="Grandes Llanuras">
+          </button>
+          
+          <button class="ecoregion-btn central-great-plains" data-region="central-great-plains" onclick="navigateTo('centralGreatPlains')">
+            <img src="Ecoregions/central-great-plains.png" alt="Grandes Llanuras Centrales">
+          </button>
+          
+          <button class="ecoregion-btn cross-timbers" data-region="cross-timbers" onclick="navigateTo('crossTimbers')">
+            <img src="Ecoregions/cross-timbers.png" alt="Bosques Cruzados">
+          </button>
+          
+          <button class="ecoregion-btn edwards-plateau" data-region="edwards-plateau" onclick="navigateTo('edwardsPlateau')">
+            <img src="Ecoregions/edwards-plateau.png" alt="Meseta Edwards">
+          </button>
+          
+          <button class="ecoregion-btn southern-texas-plains" data-region="southern-texas-plains" onclick="navigateTo('southernTexasPlains')">
+            <img src="Ecoregions/southern-texas-plains.png" alt="Llanuras del Sur de Texas">
+          </button>
+          
+          <button class="ecoregion-btn texas-blackland-prairies" data-region="texas-blackland-prairies" onclick="navigateTo('texasBlacklandPrairies')">
+            <img src="Ecoregions/texas-blackland-prairies.png" alt="Praderas de Tierra Negra de Texas">
+          </button>
+          
+          <button class="ecoregion-btn east-central-texas-plains" data-region="east-central-texas-plains" onclick="navigateTo('eastCentralTexasPlains')">
+            <img src="Ecoregions/east-central-texas-plains.png" alt="Llanuras del Este Central de Texas">
+          </button>
+          
+          <button class="ecoregion-btn western-gulf-coastal-plain" data-region="western-gulf-coastal-plain" onclick="navigateTo('westernGulfCoastalPlain')">
+            <img src="Ecoregions/western-gulf-coastal-plain.png" alt="Llanura Costera del Golfo Occidental">
+          </button>
+          
+          <button class="ecoregion-btn south-central-plains" data-region="south-central-plains" onclick="navigateTo('southCentralPlains')">
+            <img src="Ecoregions/south-central-plains.png" alt="Llanuras del Centro Sur">
+          </button>
+          
+          <button class="ecoregion-btn arizona-new-mexico-mountains" data-region="arizona-new-mexico-mountains" onclick="navigateTo('arizonaNewMexicoMountains')">
+            <img src="Ecoregions/arizona-new-mexico-mountains.png" alt="Montañas de Arizona y Nuevo México">
+          </button>
+          
+          <div class="language-selector">
+            <a href="#" onclick="navigateTo('startMenuEng'); return false;">English</a>
+            <span class="divider">|</span>
+            <span>Español</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chihuahuan Deserts Detail Page -->
+    <div id="chihuahuanDeserts" class="page detail-page">
+      <div class="detail-background"></div>
+      <div class="back-button">
+        <a href="#" onclick="navigateTo('startMenuEng'); return false;">← Back</a>
+      </div>
+      <h2 class="ecoregion-title">Chihuahuan Deserts</h2>
+      <p class="ecoregion-description">Description of what this ecoregion looks like and so on and so forth. Hopefully will be about this long.</p>
+      
+      <div class="search-section">
+        <input type="text" class="search-input" placeholder="Search Plants">
+      </div>
+      
+      <div class="plant-grid">
+        <div class="plant-card">
+          <img src="https://www.figma.com/api/mcp/asset/e6fcb678-f54f-4e72-a0a0-9c51589e8111" alt="Plant">
+          <p class="plant-name">Abronia angustifolia</p>
+          <p class="plant-common">Purple Sand Verbena, Narrow-leaf Sand-verbena</p>
+          <button class="learn-more-btn">LEARN MORE</button>
+        </div>
+        
+        <div class="plant-card">
+          <img src="https://www.figma.com/api/mcp/asset/4497fcaa-8f90-4d2c-bac8-7c95292cfc8b" alt="Plant">
+          <p class="plant-name">Abronia fragrans</p>
+          <p class="plant-common">Fragrant Sand-Verbena, Sand Verbena, Prairie Snowball, Heart's Delight</p>
+          <button class="learn-more-btn">LEARN MORE</button>
+        </div>
+        
+        <div class="plant-card">
+          <img src="https://www.figma.com/api/mcp/asset/c05d0383-03bf-4e21-9be1-002dd4a43ef0" alt="Plant">
+          <p class="plant-name">Abronia angustifolia</p>
+          <p class="plant-common">Texas Indian Mallow, Indian Mallow</p>
+          <button class="learn-more-btn">LEARN MORE</button>
+        </div>
+        
+        <div class="plant-card">
+          <img src="https://www.figma.com/api/mcp/asset/4497fcaa-8f90-4d2c-bac8-7c95292cfc8b" alt="Plant">
+          <p class="plant-name">Abronia fragrans</p>
+          <p class="plant-common">Fragrant Sand-Verbena, Sand Verbena, Prairie Snowball, Heart's Delight</p>
+          <button class="learn-more-btn">LEARN MORE</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Southwestern Tablelands Detail Page -->
+    <div id="southwesternTablelands" class="page detail-page">
+      <div class="detail-background"></div>
+      <div class="back-button">
+        <a href="#" onclick="navigateTo('startMenuEng'); return false;">← Back</a>
+      </div>
+      <h2 class="ecoregion-title">Southwestern Tablelands</h2>
+      <p class="ecoregion-description">Description of what this ecoregion looks like and so on and so forth. Hopefully will be about this long.</p>
+      
+      <div class="search-section">
+        <input type="text" class="search-input" placeholder="Search Plants">
+      </div>
+      
+      <div class="plant-grid">
+        <div class="plant-card">
+          <img src="https://www.figma.com/api/mcp/asset/f2f4d3e5-5550-40e5-9dda-af56de0784e2" alt="Plant">
+          <p class="plant-name">Abronia angustifolia</p>
+          <p class="plant-common">Purple Sand Verbena, Narrow-leaf Sand-verbena</p>
+          <button class="learn-more-btn">LEARN MORE</button>
+        </div>
+        
+        <div class="plant-card">
+          <img src="https://www.figma.com/api/mcp/asset/b95c5df3-643d-4756-9760-bcfc11aea80c" alt="Plant">
+          <p class="plant-name">Abronia fragrans</p>
+          <p class="plant-common">Fragrant Sand-Verbena, Sand Verbena, Prairie Snowball, Heart's Delight</p>
+          <button class="learn-more-btn">LEARN MORE</button>
+        </div>
+        
+        <div class="plant-card">
+          <img src="https://www.figma.com/api/mcp/asset/761f3af6-da56-4e92-836b-74078240e3f8" alt="Plant">
+          <p class="plant-name">Abronia angustifolia</p>
+          <p class="plant-common">Texas Indian Mallow, Indian Mallow</p>
+          <button class="learn-more-btn">LEARN MORE</button>
+        </div>
+        
+        <div class="plant-card">
+          <img src="https://www.figma.com/api/mcp/asset/b95c5df3-643d-4756-9760-bcfc11aea80c" alt="Plant">
+          <p class="plant-name">Abronia fragrans</p>
+          <p class="plant-common">Fragrant Sand-Verbena, Sand Verbena, Prairie Snowball, Heart's Delight</p>
+          <button class="learn-more-btn">LEARN MORE</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- High Plains Detail Page -->
+    <div id="highPlains" class="page detail-page">
+      <div class="detail-background"></div>
+      <div class="back-button">
+        <a href="#" onclick="navigateTo('startMenuEng'); return false;">← Back</a>
+      </div>
+      <h2 class="ecoregion-title">High Plains</h2>
+      <p class="ecoregion-description">Description of what this ecoregion looks like and so on and so forth. Hopefully will be about this long.</p>
+      
+      <div class="search-section">
+        <input type="text" class="search-input" placeholder="Search Plants">
+      </div>
+      
+      <div class="plant-grid">
+        <div class="plant-card">
+          <img src="https://www.figma.com/api/mcp/asset/bb84a801-11a6-4613-b5ca-2fc700cf336d" alt="Plant">
+          <p class="plant-name">Abronia angustifolia</p>
+          <p class="plant-common">Purple Sand Verbena, Narrow-leaf Sand-verbena</p>
+          <button class="learn-more-btn">LEARN MORE</button>
+        </div>
+        
+        <div class="plant-card">
+          <img src="https://www.figma.com/api/mcp/asset/cc60c761-187c-4f40-b197-299ff4d35d63" alt="Plant">
+          <p class="plant-name">Abronia fragrans</p>
+          <p class="plant-common">Fragrant Sand-Verbena, Sand Verbena, Prairie Snowball, Heart's Delight</p>
+          <button class="learn-more-btn">LEARN MORE</button>
+        </div>
+        
+        <div class="plant-card">
+          <img src="https://www.figma.com/api/mcp/asset/514390cc-7405-4e6b-b617-22998a7ddb69" alt="Plant">
+          <p class="plant-name">Abronia angustifolia</p>
+          <p class="plant-common">Texas Indian Mallow, Indian Mallow</p>
+          <button class="learn-more-btn">LEARN MORE</button>
+        </div>
+        
+        <div class="plant-card">
+          <img src="https://www.figma.com/api/mcp/asset/cc60c761-187c-4f40-b197-299ff4d35d63" alt="Plant">
+          <p class="plant-name">Abronia fragrans</p>
+          <p class="plant-common">Fragrant Sand-Verbena, Sand Verbena, Prairie Snowball, Heart's Delight</p>
+          <button class="learn-more-btn">LEARN MORE</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Central Great Plains Detail Page -->
+    <div id="centralGreatPlains" class="page detail-page">
+      <div class="detail-background"></div>
+      <div class="back-button">
+        <a href="#" onclick="navigateTo('startMenuEng'); return false;">← Back</a>
+      </div>
+      <h2 class="ecoregion-title">Central Great Plains</h2>
+      <p class="ecoregion-description">Rolling grasslands with transitional climate between the High Plains and eastern prairies.</p>
+      
+      <div class="search-section">
+        <input type="text" class="search-input" placeholder="Search Plants">
+      </div>
+      
+      <div class="plant-grid">
+        <div class="plant-card">
+          <img src="https://www.figma.com/api/mcp/asset/e6fcb678-f54f-4e72-a0a0-9c51589e8111" alt="Plant">
+          <p class="plant-name">Abronia angustifolia</p>
+          <p class="plant-common">Purple Sand Verbena, Narrow-leaf Sand-verbena</p>
+          <button class="learn-more-btn">LEARN MORE</button>
+        </div>
+        
+        <div class="plant-card">
+          <img src="https://www.figma.com/api/mcp/asset/4497fcaa-8f90-4d2c-bac8-7c95292cfc8b" alt="Plant">
+          <p class="plant-name">Abronia fragrans</p>
+          <p class="plant-common">Fragrant Sand-Verbena, Sand Verbena, Prairie Snowball, Heart's Delight</p>
+          <button class="learn-more-btn">LEARN MORE</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cross Timbers Detail Page -->
+    <div id="crossTimbers" class="page detail-page">
+      <div class="detail-background"></div>
+      <div class="back-button">
+        <a href="#" onclick="navigateTo('startMenuEng'); return false;">← Back</a>
+      </div>
+      <h2 class="ecoregion-title">Cross Timbers</h2>
+      <p class="ecoregion-description">Oak woodlands and prairie savannas across central Texas.</p>
+      
+      <div class="search-section">
+        <input type="text" class="search-input" placeholder="Search Plants">
+      </div>
+      
+      <div class="plant-grid">
+        <div class="plant-card">
+          <img src="https://www.figma.com/api/mcp/asset/e6fcb678-f54f-4e72-a0a0-9c51589e8111" alt="Plant">
+          <p class="plant-name">Abronia angustifolia</p>
+          <p class="plant-common">Purple Sand Verbena, Narrow-leaf Sand-verbena</p>
+          <button class="learn-more-btn">LEARN MORE</button>
+        </div>
+        
+        <div class="plant-card">
+          <img src="https://www.figma.com/api/mcp/asset/4497fcaa-8f90-4d2c-bac8-7c95292cfc8b" alt="Plant">
+          <p class="plant-name">Abronia fragrans</p>
+          <p class="plant-common">Fragrant Sand-Verbena, Sand Verbena, Prairie Snowball, Heart's Delight</p>
+          <button class="learn-more-btn">LEARN MORE</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Edwards Plateau Detail Page -->
+    <div id="edwardsPlateau" class="page detail-page">
+      <div class="detail-background"></div>
+      <div class="back-button">
+        <a href="#" onclick="navigateTo('startMenuEng'); return false;">← Back</a>
+      </div>
+      <h2 class="ecoregion-title">Edwards Plateau</h2>
+      <p class="ecoregion-description">Limestone plateau characterized by cedar and oak vegetation.</p>
+      
+      <div class="search-section">
+        <input type="text" class="search-input" placeholder="Search Plants">
+      </div>
+      
+      <div class="plant-grid">
+        <div class="plant-card">
+          <img src="https://www.figma.com/api/mcp/asset/e6fcb678-f54f-4e72-a0a0-9c51589e8111" alt="Plant">
+          <p class="plant-name">Abronia angustifolia</p>
+          <p class="plant-common">Purple Sand Verbena, Narrow-leaf Sand-verbena</p>
+          <button class="learn-more-btn">LEARN MORE</button>
+        </div>
+        
+        <div class="plant-card">
+          <img src="https://www.figma.com/api/mcp/asset/4497fcaa-8f90-4d2c-bac8-7c95292cfc8b" alt="Plant">
+          <p class="plant-name">Abronia fragrans</p>
+          <p class="plant-common">Fragrant Sand-Verbena, Sand Verbena, Prairie Snowball, Heart's Delight</p>
+          <button class="learn-more-btn">LEARN MORE</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Southern Texas Plains Detail Page -->
+    <div id="southernTexasPlains" class="page detail-page">
+      <div class="detail-background"></div>
+      <div class="back-button">
+        <a href="#" onclick="navigateTo('startMenuEng'); return false;">← Back</a>
+      </div>
+      <h2 class="ecoregion-title">Southern Texas Plains</h2>
+      <p class="ecoregion-description">Coastal plain region with subtropical vegetation and diverse plant communities.</p>
+      
+      <div class="search-section">
+        <input type="text" class="search-input" placeholder="Search Plants">
+      </div>
+      
+      <div class="plant-grid">
+        <div class="plant-card">
+          <img src="https://www.figma.com/api/mcp/asset/e6fcb678-f54f-4e72-a0a0-9c51589e8111" alt="Plant">
+          <p class="plant-name">Abronia angustifolia</p>
+          <p class="plant-common">Purple Sand Verbena, Narrow-leaf Sand-verbena</p>
+          <button class="learn-more-btn">LEARN MORE</button>
+        </div>
+        
+        <div class="plant-card">
+          <img src="https://www.figma.com/api/mcp/asset/4497fcaa-8f90-4d2c-bac8-7c95292cfc8b" alt="Plant">
+          <p class="plant-name">Abronia fragrans</p>
+          <p class="plant-common">Fragrant Sand-Verbena, Sand Verbena, Prairie Snowball, Heart's Delight</p>
+          <button class="learn-more-btn">LEARN MORE</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Texas Blackland Prairies Detail Page -->
+    <div id="texasBlacklandPrairies" class="page detail-page">
+      <div class="detail-background"></div>
+      <div class="back-button">
+        <a href="#" onclick="navigateTo('startMenuEng'); return false;">← Back</a>
+      </div>
+      <h2 class="ecoregion-title">Texas Blackland Prairies</h2>
+      <p class="ecoregion-description">Fertile prairie region with dark, nutrient-rich soils.</p>
+      
+      <div class="search-section">
+        <input type="text" class="search-input" placeholder="Search Plants">
+      </div>
+      
+      <div class="plant-grid">
+        <div class="plant-card">
+          <img src="https://www.figma.com/api/mcp/asset/e6fcb678-f54f-4e72-a0a0-9c51589e8111" alt="Plant">
+          <p class="plant-name">Abronia angustifolia</p>
+          <p class="plant-common">Purple Sand Verbena, Narrow-leaf Sand-verbena</p>
+          <button class="learn-more-btn">LEARN MORE</button>
+        </div>
+        
+        <div class="plant-card">
+          <img src="https://www.figma.com/api/mcp/asset/4497fcaa-8f90-4d2c-bac8-7c95292cfc8b" alt="Plant">
+          <p class="plant-name">Abronia fragrans</p>
+          <p class="plant-common">Fragrant Sand-Verbena, Sand Verbena, Prairie Snowball, Heart's Delight</p>
+          <button class="learn-more-btn">LEARN MORE</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- East Central Texas Plains Detail Page -->
+    <div id="eastCentralTexasPlains" class="page detail-page">
+      <div class="detail-background"></div>
+      <div class="back-button">
+        <a href="#" onclick="navigateTo('startMenuEng'); return false;">← Back</a>
+      </div>
+      <h2 class="ecoregion-title">East Central Texas Plains</h2>
+      <p class="ecoregion-description">Transitional forest and prairie region with mixed vegetation.</p>
+      
+      <div class="search-section">
+        <input type="text" class="search-input" placeholder="Search Plants">
+      </div>
+      
+      <div class="plant-grid">
+        <div class="plant-card">
+          <img src="https://www.figma.com/api/mcp/asset/e6fcb678-f54f-4e72-a0a0-9c51589e8111" alt="Plant">
+          <p class="plant-name">Abronia angustifolia</p>
+          <p class="plant-common">Purple Sand Verbena, Narrow-leaf Sand-verbena</p>
+          <button class="learn-more-btn">LEARN MORE</button>
+        </div>
+        
+        <div class="plant-card">
+          <img src="https://www.figma.com/api/mcp/asset/4497fcaa-8f90-4d2c-bac8-7c95292cfc8b" alt="Plant">
+          <p class="plant-name">Abronia fragrans</p>
+          <p class="plant-common">Fragrant Sand-Verbena, Sand Verbena, Prairie Snowball, Heart's Delight</p>
+          <button class="learn-more-btn">LEARN MORE</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Western Gulf Coastal Plain Detail Page -->
+    <div id="westernGulfCoastalPlain" class="page detail-page">
+      <div class="detail-background"></div>
+      <div class="back-button">
+        <a href="#" onclick="navigateTo('startMenuEng'); return false;">← Back</a>
+      </div>
+      <h2 class="ecoregion-title">Western Gulf Coastal Plain</h2>
+      <p class="ecoregion-description">Low-lying coastal region with pine forests and grasslands.</p>
+      
+      <div class="search-section">
+        <input type="text" class="search-input" placeholder="Search Plants">
+      </div>
+      
+      <div class="plant-grid">
+        <div class="plant-card">
+          <img src="https://www.figma.com/api/mcp/asset/e6fcb678-f54f-4e72-a0a0-9c51589e8111" alt="Plant">
+          <p class="plant-name">Abronia angustifolia</p>
+          <p class="plant-common">Purple Sand Verbena, Narrow-leaf Sand-verbena</p>
+          <button class="learn-more-btn">LEARN MORE</button>
+        </div>
+        
+        <div class="plant-card">
+          <img src="https://www.figma.com/api/mcp/asset/4497fcaa-8f90-4d2c-bac8-7c95292cfc8b" alt="Plant">
+          <p class="plant-name">Abronia fragrans</p>
+          <p class="plant-common">Fragrant Sand-Verbena, Sand Verbena, Prairie Snowball, Heart's Delight</p>
+          <button class="learn-more-btn">LEARN MORE</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- South Central Plains Detail Page -->
+    <div id="southCentralPlains" class="page detail-page">
+      <div class="detail-background"></div>
+      <div class="back-button">
+        <a href="#" onclick="navigateTo('startMenuEng'); return false;">← Back</a>
+      </div>
+      <h2 class="ecoregion-title">South Central Plains</h2>
+      <p class="ecoregion-description">Mixed grassland and forest region with variable precipitation.</p>
+      
+      <div class="search-section">
+        <input type="text" class="search-input" placeholder="Search Plants">
+      </div>
+      
+      <div class="plant-grid">
+        <div class="plant-card">
+          <img src="https://www.figma.com/api/mcp/asset/e6fcb678-f54f-4e72-a0a0-9c51589e8111" alt="Plant">
+          <p class="plant-name">Abronia angustifolia</p>
+          <p class="plant-common">Purple Sand Verbena, Narrow-leaf Sand-verbena</p>
+          <button class="learn-more-btn">LEARN MORE</button>
+        </div>
+        
+        <div class="plant-card">
+          <img src="https://www.figma.com/api/mcp/asset/4497fcaa-8f90-4d2c-bac8-7c95292cfc8b" alt="Plant">
+          <p class="plant-name">Abronia fragrans</p>
+          <p class="plant-common">Fragrant Sand-Verbena, Sand Verbena, Prairie Snowball, Heart's Delight</p>
+          <button class="learn-more-btn">LEARN MORE</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Arizona New Mexico Mountains Detail Page -->
+    <div id="arizonaNewMexicoMountains" class="page detail-page">
+      <div class="detail-background"></div>
+      <div class="back-button">
+        <a href="#" onclick="navigateTo('startMenuEng'); return false;">← Back</a>
+      </div>
+      <h2 class="ecoregion-title">Arizona/New Mexico Mountains</h2>
+      <p class="ecoregion-description">Mountain region with coniferous forests and rugged terrain.</p>
+      
+      <div class="search-section">
+        <input type="text" class="search-input" placeholder="Search Plants">
+      </div>
+      
+      <div class="plant-grid">
+        <div class="plant-card">
+          <img src="https://www.figma.com/api/mcp/asset/e6fcb678-f54f-4e72-a0a0-9c51589e8111" alt="Plant">
+          <p class="plant-name">Abronia angustifolia</p>
+          <p class="plant-common">Purple Sand Verbena, Narrow-leaf Sand-verbena</p>
+          <button class="learn-more-btn">LEARN MORE</button>
+        </div>
+        
+        <div class="plant-card">
+          <img src="https://www.figma.com/api/mcp/asset/4497fcaa-8f90-4d2c-bac8-7c95292cfc8b" alt="Plant">
+          <p class="plant-name">Abronia fragrans</p>
+          <p class="plant-common">Fragrant Sand-Verbena, Sand Verbena, Prairie Snowball, Heart's Delight</p>
+          <button class="learn-more-btn">LEARN MORE</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="sketch.js"></script>
+  </body>
+</html>
+
