@@ -25,6 +25,79 @@ html, body {
   display: block;
 }
 
+/* Landing Page Container */
+.landing-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+}
+
+.map-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  overflow: hidden;
+}
+
+.legend-sidebar {
+  width: 700px;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-left: 1px solid #f0f0f0;
+  overflow-y: auto;
+}
+
+.legend-sidebar h1 {
+  font-size: 80px;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 30px;
+  color: #60721D;
+  font-family: 'Noto Sans Hebrew', 'Noto Sans', sans-serif;
+  letter-spacing: -0.02em;
+  word-wrap: break-word;
+}
+
+.legend {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 40px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  gap: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.legend-item:hover {
+  background-color: #f9f9f9;
+}
+
+.legend-color {
+  width: 28px;
+  height: 16px;
+  flex-shrink: 0;
+  border-radius: 1px;
+}
+
+.legend-label {
+  font-size: 14px;
+  font-style: italic;
+  color: #11100f;
+  font-family: 'Noto Serif Tamil Slanted', 'Noto Sans', sans-serif;
+}
+
 .container {
   display: flex;
   height: 100vh;

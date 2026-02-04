@@ -1,3 +1,6 @@
+// Global language tracking
+let currentLanguage = 'eng';
+
 // Page Navigation
 function navigateTo(pageId) {
   // Hide all pages
@@ -10,7 +13,59 @@ function navigateTo(pageId) {
   const selectedPage = document.getElementById(pageId);
   if (selectedPage) {
     selectedPage.classList.add('active');
+    
+    // Update currentLanguage based on which landing page we're on
+    if (pageId === 'startMenuSpa') {
+      currentLanguage = 'spa';
+    } else if (pageId === 'startMenuEng') {
+      currentLanguage = 'eng';
+    }
+    
     window.scrollTo(0, 0);
+  }
+}
+
+// Update page language content
+function updatePageLanguage(pageId, language) {
+  const page = document.getElementById(pageId);
+  if (!page) return;
+  
+  const englishContent = page.querySelectorAll('[data-lang="eng"]');
+  const spanishContent = page.querySelectorAll('[data-lang="spa"]');
+  
+  if (language === 'spa') {
+    englishContent.forEach(el => el.style.display = 'none');
+    spanishContent.forEach(el => el.style.display = '');
+  } else {
+    englishContent.forEach(el => el.style.display = '');
+    spanishContent.forEach(el => el.style.display = 'none');
+  }
+}
+
+// Set language globally
+function setLanguage(lang) {
+  currentLanguage = lang;
+  const currentPage = document.querySelector('.page.active');
+  if (currentPage) {
+    updatePageLanguage(currentPage.id, lang);
+  }
+}
+
+// Navigate back to correct landing page based on current language
+function goBack() {
+  if (currentLanguage === 'spa') {
+    navigateTo('startMenuSpa');
+  } else {
+    navigateTo('startMenuEng');
+  }
+}
+
+// Navigate to ecoregion detail page in correct language
+function navigateToEcoregion(pageId) {
+  if (currentLanguage === 'spa') {
+    navigateTo(pageId + 'Spa');
+  } else {
+    navigateTo(pageId);
   }
 }
 
@@ -128,9 +183,25 @@ document.addEventListener('DOMContentLoaded', function() {
   languageLinks.forEach(link => {
     link.addEventListener('click', function(e) {
       e.preventDefault();
-      // Language switching already handled by onclick
+      setLanguage('spa');
     });
   });
+  
+  // Track language when landing page changes
+  const startMenuEng = document.getElementById('startMenuEng');
+  const startMenuSpa = document.getElementById('startMenuSpa');
+  
+  // Observer to track page changes
+  const observer = new MutationObserver(() => {
+    if (startMenuSpa && startMenuSpa.classList.contains('active')) {
+      currentLanguage = 'spa';
+    } else if (startMenuEng && startMenuEng.classList.contains('active')) {
+      currentLanguage = 'eng';
+    }
+  });
+  
+  observer.observe(startMenuEng, { attributes: true, attributeFilter: ['class'] });
+  observer.observe(startMenuSpa, { attributes: true, attributeFilter: ['class'] });
 });
 
 // Filter plants based on search
