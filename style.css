@@ -30,7 +30,7 @@ html, body {
   display: flex;
   height: 100vh;
   width: 100vw;
-  background-color: white;
+  background-color: rgb(255, 237, 217);
 }
 
 .map-section {
@@ -47,7 +47,7 @@ html, body {
   padding: 50px 40px;
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: rgb(255, 237, 217);
   border-left: 1px solid #f0f0f0;
   overflow-y: auto;
 }
@@ -166,11 +166,18 @@ html, body {
 .map-container {
   width: 753px;
   height: 729px;
-  position: absolute;
+  position: relative;
   top: 54px;
   left: 50%;
   transform: translateX(-50%);
   overflow: hidden;
+}
+
+.ecoregions{
+  position: absolute;
+  left: 15px;
+  top: -58px;
+  scale: 0.88;
 }
 
 .ecoregions-map {
