@@ -180,10 +180,37 @@ html, body {
   scale: 0.88;
 }
 
+.map-wrapper {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
 .ecoregions-map {
+  display: block;
+  max-width: 100%;
+  max-height: calc(100vh - 80px);
+  width: auto;
+  height: auto;
+}
+
+.region-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  filter: brightness(10);
+  mix-blend-mode: screen;
+}
+
+.region-overlay.active {
+  opacity: 0.45;
+  filter: brightness(10) drop-shadow(0 0 12px rgba(255, 255, 255, 1)) drop-shadow(0 0 24px rgba(255, 255, 200, 0.8));
 }
 
 /* Ecoregion Buttons */
@@ -357,7 +384,7 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('https://www.figma.com/api/mcp/asset/062e7c26-59e0-4dbb-97ab-372c9040367c') center/cover no-repeat;
+  background: url('Ecoregions/desert-background.jpg') center/cover no-repeat;
   opacity: 0.3;
   pointer-events: none;
   z-index: -1;
@@ -457,6 +484,36 @@ html, body {
   object-fit: cover;
 }
 
+.plant-image-placeholder {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.plant-initials {
+  font-size: 64px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.3);
+  font-family: 'Noto Sans Hebrew', 'Noto Sans', sans-serif;
+}
+
+.invasive-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #c0392b;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-family: 'Noto Sans', sans-serif;
+}
+
 .plant-card .plant-name {
   padding: 15px 15px 5px;
   font-size: 14px;
@@ -466,12 +523,28 @@ html, body {
 }
 
 .plant-card .plant-common {
-  padding: 0 15px 15px;
+  padding: 0 15px 5px;
   font-size: 16px;
   font-weight: 700;
   color: #333;
   line-height: 1.4;
   min-height: 50px;
+}
+
+.plant-card .plant-source {
+  padding: 0 15px 15px;
+  font-size: 10px;
+  color: #999;
+  font-family: 'Inter', sans-serif;
+}
+
+.ecoregion-subtitle {
+  font-size: 18px;
+  color: #c0392b;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 .learn-more-btn {

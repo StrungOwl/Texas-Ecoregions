@@ -11,58 +11,72 @@
     <div id="startMenuSpa" class="page active">
       <div class="landing-container">
         <div class="map-section">
-          <img src="Ecoregions/recolored-texas-map.png" alt="Mapa de Ecorregiones de Texas" class="ecoregions-map">
+          <div class="map-wrapper">
+            <img src="Ecoregions/recolored-texas-map.png" alt="Mapa de Ecorregiones de Texas" class="ecoregions-map">
+            <img src="Ecoregions/chihuahuan-deserts.png" data-region="chihuahuanDeserts" class="region-overlay" alt="">
+            <img src="Ecoregions/arizona-new-mexico-mountains.png" data-region="arizonaNewMexicoMountains" class="region-overlay" alt="">
+            <img src="Ecoregions/high-plains.png" data-region="highPlains" class="region-overlay" alt="">
+            <img src="Ecoregions/southwestern-tablelands.png" data-region="southwesternTablelands" class="region-overlay" alt="">
+            <img src="Ecoregions/central-great-plains.png" data-region="centralGreatPlains" class="region-overlay" alt="">
+            <img src="Ecoregions/cross-timbers.png" data-region="crossTimbers" class="region-overlay" alt="">
+            <img src="Ecoregions/texas-blackland-prairies.png" data-region="texasBlacklandPrairies" class="region-overlay" alt="">
+            <img src="Ecoregions/edwards-plateau.png" data-region="edwardsPlateau" class="region-overlay" alt="">
+            <img src="Ecoregions/southern-texas-plains.png" data-region="southernTexasPlains" class="region-overlay" alt="">
+            <img src="Ecoregions/east-central-texas-plains.png" data-region="eastCentralTexasPlains" class="region-overlay" alt="">
+            <img src="Ecoregions/south-central-plains.png" data-region="southCentralPlains" class="region-overlay" alt="">
+            <img src="Ecoregions/western-gulf-coastal-plain.png" data-region="westernGulfCoastalPlain" class="region-overlay" alt="">
+          </div>
         </div>
         
         <div class="legend-sidebar">
           <h1>Ecorregiones de Texas</h1>
           
           <div class="legend">
-            <div class="legend-item" onclick="navigateToEcoregion('chihuahuanDeserts')">
+            <div class="legend-item" data-region="chihuahuanDeserts" onclick="navigateToEcoregion('chihuahuanDeserts')">
               <div class="legend-color" style="background-color: #6a380a;"></div>
               <span class="legend-label">Desiertos de Chihuahua</span>
             </div>
-            <div class="legend-item" onclick="navigateToEcoregion('arizonaNewMexicoMountains')">
+            <div class="legend-item" data-region="arizonaNewMexicoMountains" onclick="navigateToEcoregion('arizonaNewMexicoMountains')">
               <div class="legend-color" style="background-color: #ff8817;"></div>
               <span class="legend-label">Montañas de Arizona/Nuevo México</span>
             </div>
-            <div class="legend-item" onclick="navigateToEcoregion('highPlains')">
+            <div class="legend-item" data-region="highPlains" onclick="navigateToEcoregion('highPlains')">
               <div class="legend-color" style="background-color: #9c4c00;"></div>
               <span class="legend-label">Grandes Llanuras</span>
             </div>
-            <div class="legend-item" onclick="navigateToEcoregion('southwesternTablelands')">
+            <div class="legend-item" data-region="southwesternTablelands" onclick="navigateToEcoregion('southwesternTablelands')">
               <div class="legend-color" style="background-color: #402711;"></div>
               <span class="legend-label">Mesetas del Suroeste</span>
             </div>
-            <div class="legend-item" onclick="navigateToEcoregion('centralGreatPlains')">
+            <div class="legend-item" data-region="centralGreatPlains" onclick="navigateToEcoregion('centralGreatPlains')">
               <div class="legend-color" style="background-color: #d48c49;"></div>
               <span class="legend-label">Grandes Llanuras Centrales</span>
             </div>
-            <div class="legend-item" onclick="navigateToEcoregion('crossTimbers')">
+            <div class="legend-item" data-region="crossTimbers" onclick="navigateToEcoregion('crossTimbers')">
               <div class="legend-color" style="background-color: #d06500;"></div>
               <span class="legend-label">Bosques Cruzados</span>
             </div>
-            <div class="legend-item" onclick="navigateToEcoregion('texasBlacklandPrairies')">
+            <div class="legend-item" data-region="texasBlacklandPrairies" onclick="navigateToEcoregion('texasBlacklandPrairies')">
               <div class="legend-color" style="background-color: #ffbe82;"></div>
               <span class="legend-label">Praderas de Tierra Negra de Texas</span>
             </div>
-            <div class="legend-item" onclick="navigateToEcoregion('edwardsPlateau')">
+            <div class="legend-item" data-region="edwardsPlateau" onclick="navigateToEcoregion('edwardsPlateau')">
               <div class="legend-color" style="background-color: #ffeedf;"></div>
               <span class="legend-label">Meseta de Edwards</span>
             </div>
-            <div class="legend-item" onclick="navigateToEcoregion('southernTexasPlains')">
+            <div class="legend-item" data-region="southernTexasPlains" onclick="navigateToEcoregion('southernTexasPlains')">
               <div class="legend-color" style="background-color: #ede5de;"></div>
               <span class="legend-label">Llanuras del Sur de Texas</span>
             </div>
-            <div class="legend-item" onclick="navigateToEcoregion('eastCentralTexasPlains')">
+            <div class="legend-item" data-region="eastCentralTexasPlains" onclick="navigateToEcoregion('eastCentralTexasPlains')">
               <div class="legend-color" style="background-color: #ffe1c7;"></div>
               <span class="legend-label">Llanuras del Este Central de Texas</span>
             </div>
-            <div class="legend-item" onclick="navigateToEcoregion('southCentralPlains')">
+            <div class="legend-item" data-region="southCentralPlains" onclick="navigateToEcoregion('southCentralPlains')">
               <div class="legend-color" style="background-color: #ffd4ad;"></div>
               <span class="legend-label">Llanuras del Centro Sur</span>
             </div>
-            <div class="legend-item" onclick="navigateToEcoregion('westernGulfCoastalPlain')">
+            <div class="legend-item" data-region="westernGulfCoastalPlain" onclick="navigateToEcoregion('westernGulfCoastalPlain')">
               <div class="legend-color" style="background-color: #a99889;"></div>
               <span class="legend-label">Llanura Costera del Golfo Occidental</span>
             </div>
