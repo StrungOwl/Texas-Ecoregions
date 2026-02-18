@@ -175,9 +175,9 @@ html, body {
 
 .ecoregions{
   position: absolute;
-  left: 15px;
+  left: 20px;
   top: -58px;
-  scale: 0.88;
+  scale: 1.5;
 }
 
 .map-wrapper {
